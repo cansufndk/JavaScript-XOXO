@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(241, 224, 221);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+h1{
+    font-size: 3rem;
+    color: rgb(14, 13, 13);
+    margin-bottom: 2rem;
+}
+h3{
+    margin-bottom: 2%;
+}
+.container{
+    display: grid;
+    width: 25rem;
+    height: 25rem;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(3 ,1fr);
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 80px;
+}
+.block{
+    display: flex;
+    border: 1px solid black;
+    background-color: rgb(255, 111, 0);
+    align-items: center;
+    justify-content: center;
+}
+.block:hover{
+    border: 2px solid #fff;
+    transition: .3;
+}
+a{
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 111, 0);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+
+}
+a:hover{
+    background: rgb(255, 111, 0);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(255, 111, 0)
+                0 0 25px rgb(255, 111, 0)
+                0 0 50px rgb(255, 111, 0)
+                0 0 100px rgb(255, 111, 0);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(255, 111, 0));
+    animation: btn-animl 1s linear infinite;
+}
+@keyframes btn-animl{
+    0% {
+        left: -100;
+    }
+    50%, 100%{
+        left:100%
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(255, 111, 0));
+    animation: btn-animl2 1s linear infinite;
+    animation-delay:.25s;
+}
+@keyframes btn-animl2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(255, 111, 0));
+    animation: btn-animl3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-animl3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(255, 111, 0));
+    animation: btn-animal4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-animal4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+}
